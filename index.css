@@ -1,0 +1,383 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family: 'Poppins', sans-serif;
+scroll-behavior:smooth;
+}
+
+/*whole design*/
+body{
+background:linear-gradient(135deg,#0f172a,#020617);
+color:white;
+line-height:1.6;
+}
+
+/* NAVBAR */
+header{
+background:#020617;
+padding:15px 8%;
+position:sticky;
+top:0;
+z-index:1000;
+}
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+.logo{
+color:#38bdf8;
+font-size:24px;
+font-weight:bold;
+}
+nav ul{
+display:flex;
+list-style:none;
+}
+nav ul li{
+margin-left:25px;
+}
+/*Navbar links about/skills/certificate/contact*/
+nav ul li a{
+text-decoration:none;
+color:white;
+font-weight:500;
+position:relative;
+}
+
+/* underline animation */
+nav ul li a::after{
+content:'';
+width:0%;
+height:2px;
+background:#38bdf8;
+position:absolute;
+left:0;
+bottom:-5px;
+transition:0.3s;
+}
+nav ul li a:hover::after{
+width:100%;
+}
+
+/* Front */
+.front{
+height:90vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+animation:fadeIn 2s ease;
+}
+.front h1{
+font-size:50px;
+margin-bottom:10px;
+}
+.front span{
+color:#38bdf8;
+}
+.front p{
+font-size:20px;
+opacity:0.8;
+}
+
+/* BUTTON */
+.btn{
+display:inline-block;
+margin-top:25px;
+padding:12px 28px;
+background:linear-gradient(45deg,#38bdf8,#0ea5e9);
+color:black;
+font-weight:bold;
+border-radius:30px;
+text-decoration:none;
+transition:0.4s;
+box-shadow:0 0 10px rgba(56,189,248,0.5);
+}
+
+/* SECTIONS */
+.section{
+padding:90px 10%;
+text-align:center;
+animation:fadeUp 1s ease;
+}
+.section h2{
+margin-bottom:40px;
+font-size:32px;
+color:#38bdf8;
+}
+
+/* CARDS */
+
+.cards{
+display:grid;
+grid-template-columns:repeat(2, 1fr);
+gap:25px;
+}
+.card{
+background:#1e293b;
+padding:30px;
+border-radius:12px;
+transition:0.4s;
+cursor:pointer;
+position:relative;
+overflow:hidden;
+text-align: justify;
+transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* --- COLLEGE ICON + NAME LAYOUT --- */
+
+/* Wrapper inside timeline-item for icon + info stacked vertically */
+.timeline-item .college-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+/* College icon/logo */
+.timeline-item .college-icon {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  border-radius: 50%;
+  background: white;
+  box-shadow: 0 0 10px rgba(56,189,248,0.3);
+  transition: 0.3s;
+  margin-top: 20px;
+}
+/* College name displayed below icon */
+.timeline-item .college-header  {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 20px;
+  color: #38bdf8 ;
+  font-size: 28px;
+}
+.timeline-item .college-name{
+    font-size: 28px;
+  color: #38bdf8;
+  font-weight: 500;
+  margin-bottom: 8px;
+  display: block;
+}
+/* Year range */
+.timeline-item .year {
+  font-size: 15px;
+  color: white;
+  font-weight: 500;
+  margin-bottom: 8px;
+  display: block;
+}
+/* Degree title */
+.timeline-item h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 6px;
+}
+
+/* Description */
+.timeline-item p {
+  font-size: 14px;
+  color: #94a3b8;
+  line-height: 1.6;
+}
+
+/* Skill CARDS */
+
+.skillcards{
+display:grid;
+grid-template-columns:repeat(3, 1fr);
+gap:25px;
+}
+.card{
+background:#1e293b;
+padding:30px;
+border-radius:12px;
+transition:0.4s;
+cursor:pointer;
+position:relative;
+overflow:hidden;
+text-align: justify;
+}
+
+
+/*Contact section*/
+.contact-card {
+  width: fit-content;
+  height: fit-content;
+  background-color: rgb(238, 238, 238);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px 25px;
+  gap: 20px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.055);
+}
+/* for all social containers*/
+.socialContainer {
+  width: 52px;
+  height: 52px;
+  background-color: rgb(44, 44, 44);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+
+  transition-duration: .3s;
+}
+/* instagram*/
+.containerOne:hover {
+  background-color: #d62976;
+  transition-duration: .3s;
+}
+/* twitter*/
+.containerTwo:hover {
+  background-color: #00acee;
+  transition-duration: .3s;
+}
+/* linkdin*/
+.containerThree:hover {
+  background-color: #0072b1;
+  transition-duration: .3s;
+}
+/* Whatsapp*/
+.containerFour:hover {
+  background-color: #128C7E;
+  transition-duration: .3s;
+}
+.socialContainer:active {
+  transform: scale(0.9);
+  transition-duration: .5s;
+}
+
+.socialSvg {
+  width: 17px;
+}
+
+.socialSvg path {
+  fill: rgb(255, 255, 255);
+}
+
+.socialContainer:hover .socialSvg {
+  animation: slide-in-top 0.3s both;
+}
+
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.contact-card{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin:40px auto;
+  gap:15px;
+}
+
+
+/* FOOTER */
+
+footer{
+text-align:center;
+padding:20px;
+background:#020617;
+margin-top:40px;
+opacity:0.7;
+}
+
+
+/* ANIMATIONS */
+
+@keyframes fadeIn{
+from{
+opacity:0;
+transform:translateY(-20px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(40px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+
+
+.card::before{
+content:'';
+position:absolute;
+top:0;
+left:-100%;
+width:100%;
+height:100%;
+background:linear-gradient(120deg,transparent,#38bdf8,transparent);
+transition:1.0s;
+}
+
+.card:hover::before{
+left:100%;
+}
+
+.card:hover{
+transform: translateY(-10px) scale(1.03);
+box-shadow: 0 10px 25px rgba(56,189,248,0.3);
+}
+
+
+
+/* PROJECT CARD IMPROVEMENTS */
+
+.project h3{
+color:#ffffff;
+font-size:20px;
+margin-bottom:12px;
+}
+
+.project p{
+color:#cbd5e1;
+font-size:15px;
+margin-bottom:8px;
+line-height:1.6;
+}
+
+/* Project Button */
+
+.project-btn{
+display:inline-block;
+margin-top:15px;
+padding:10px 22px;
+background:linear-gradient(45deg,#38bdf8,#0ea5e9);
+color:black;
+font-weight:600;
+border-radius:25px;
+text-decoration:none;
+font-size:14px;
+transition:0.3s;
+box-shadow:0 0 10px rgba(56,189,248,0.5);
+}
+
+.project-btn:hover{
+transform:translateY(-3px);
+box-shadow:0 6px 18px rgba(56,189,248,0.4);
+}
